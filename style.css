@@ -406,6 +406,8 @@ body {
 .testimonials .testimonials-flex-container {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 .testimonials .testimonials-item {
   display: flex;
@@ -502,13 +504,15 @@ body {
 }
 
 .apply {
+  overflow: hidden;
   position: relative;
-  z-index: -1;
   background: #e5e5e5;
   padding-top: 320px;
   padding-bottom: 200px;
 }
 .apply .apply-container {
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
   width: 72%;
   display: flex;
@@ -516,7 +520,7 @@ body {
   align-items: center;
 }
 .apply .drop {
-  z-index: -1;
+  z-index: 0;
   border: 3px solid;
   border-radius: 500px;
   transform: rotate(-65deg);
@@ -817,6 +821,11 @@ body {
 
   .footer .footer-container {
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 660px) {
+  .footer .footer-menu ul {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 425px) {
